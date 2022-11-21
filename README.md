@@ -1,46 +1,61 @@
-# Getting Started with Create React App
+# Code Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+Hello there! 
 
-## Available Scripts
+This is a code assessment project developed by me for [Jobylon](https://www.jobylon.com/)
 
-In the project directory, you can run:
+You might quick check the envision design on Figma [here](https://www.figma.com/file/0fFVbm1uapVQx2QCCxmVKO/Jobylon?node-id=0%3A1&t=810XiUUX1CVqIqVn-1)
 
-### `yarn start`
+And you might be thinking: "Did he clone their website?"
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Well, I like their design and it was more than an inspiration for this project and since this project is a test for a job position there, why not keep the same look and feel?
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Hope you enjoy it.
 
-### `yarn test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project is using `yarn` as the package manager. [Documentation](https://classic.yarnpkg.com/lang/en/docs/install)
 
-### `yarn build`
+### 1 Step
+If you already have it, you can skip to the *2 Step*
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Just in case, please double check if you already have it, running:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+yarn --version
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Otherwise run
 
-### `yarn eject`
+```
+npm install --global yarn
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 2 Step
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Open the project directory on the terminal and run
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+yarn 
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Yep, that's all :)
 
-## Learn More
+## The fun part
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Get the app up and running \o/
+```
+yarn start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+It should open your browser automatically, but, again, just in case, please check, on your browser: [http://localhost:3000](http://localhost:3000) 
+> Btw I just tested it on Chrome, Safari and Firefox
+
+Have fun!
+
+## Tests
+
+Use `yarn test` for a full unit test. You might add `--coverage` flag to check the coverage.
+
+Obs: The tests are also using `jest-axe` to look for accessibility violations.
