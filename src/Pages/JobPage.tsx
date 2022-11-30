@@ -18,7 +18,7 @@ import {
   LinkStyled,
 } from '../components/common';
 import { CompanyLogo, Tag, TagIcon, Tags, TagText } from '../components/Job/styles';
-import { useJobs } from '../components/Job/hooks/useJobs';
+import { useJobs } from '../hooks/useJobs';
 
 export default function JobPage(): React.ReactElement | null {
   const { jobs } = useJobs();
@@ -42,8 +42,7 @@ export default function JobPage(): React.ReactElement | null {
     );
   }
 
-  const { id, title, locations, employment_type: employmentType, company, descr, skills, urls } = job;
-  const location = locations[0].location.text;
+  const { id, title, location, employmentType, company, descr, skills, urls } = job;
 
   return (
     <Container data-testid={`job--${id}`}>
@@ -110,7 +109,10 @@ export default function JobPage(): React.ReactElement | null {
               </Button>
             </Paragraph>
             <Paragraph size="small">
-              More info about this role you can find <ExternalLink href={urls.ad}>here</ExternalLink>
+              More info about this role you can find{' '}
+              <ExternalLink href={urls.ad} target="blank">
+                here
+              </ExternalLink>
             </Paragraph>
           </SectionContainer>
         </SectionCTA>

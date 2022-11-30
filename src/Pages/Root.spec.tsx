@@ -1,12 +1,14 @@
 import { render, screen } from '@testing-library/react';
 
-import { useFetchJobs } from './components/Job/hooks/useFetchJobs';
+import useFetchJobs from '../hooks/useFetchJobs';
+import jobsFixture from '../test/fixtures/jobs.json';
 
 import Root from './Root';
-import { jobs } from './test/fixtures/jobs';
-import { withRouter } from './test/utils';
+import { withRouter } from '../test/utils';
 
-jest.mock('./components/Job/hooks/useFetchJobs');
+const jobs = JSON.parse(JSON.stringify(jobsFixture));
+
+jest.mock('../hooks/useFetchJobs');
 
 const useFetchJobsMocked = useFetchJobs as jest.MockedFunction<typeof useFetchJobs>;
 

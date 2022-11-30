@@ -4,9 +4,11 @@ import { ThemeProvider } from 'styled-components';
 import { BrowserRouter } from 'react-router-dom';
 
 import theme from '../themes/jobylon';
+import { JobContext } from '../contexts/JobContext';
 
-import { jobs } from './fixtures/jobs';
-import { JobContext } from '../components/Job/contexts/JobContext';
+import jobsFixture from './fixtures/jobs.json';
+
+const jobs = JSON.parse(JSON.stringify(jobsFixture));
 
 export function withThemeProvider(Component: React.ReactNode) {
   return (

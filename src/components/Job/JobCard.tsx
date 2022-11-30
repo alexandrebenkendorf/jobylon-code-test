@@ -1,4 +1,6 @@
 import React from 'react';
+
+import Job from '../../@core/domain/entities/Job';
 import { ICONS } from '../common';
 
 import {
@@ -11,7 +13,6 @@ import {
   JobCardWrapper,
 } from './JobCard.styles';
 import { CompanyLogo, Tag, TagIcon, Tags, TagText } from './styles';
-import { Job } from './types';
 
 type JobCardProps = {
   job: Job;
@@ -28,11 +29,11 @@ export function JobCard({ job }: JobCardProps): React.ReactElement {
               <Tags>
                 <Tag>
                   <TagIcon src={ICONS.iconLocation} alt="location" />
-                  <TagText>{job.locations[0].location.text}</TagText>
+                  <TagText>{job.location}</TagText>
                 </Tag>
                 <Tag>
                   <TagIcon src={ICONS.iconContractType} alt="contract type" />
-                  <TagText>{job.employment_type}</TagText>
+                  <TagText>{job.employmentType}</TagText>
                 </Tag>
               </Tags>
             </JobCardInfo>

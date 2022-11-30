@@ -1,20 +1,16 @@
-import axios from 'axios';
 import { useCallback, useEffect, useState } from 'react';
 
-import { JOBS_API } from '../../../constants/jobs';
-import { Job } from '../types';
+import Job from '../@core/domain/entities/Job';
+import ListJobsUseCase from '../@core/useCases/ListJobs.useCase';
 
-export function useFetchJobs() {
+export default function useFetchJobs() {
   const [jobs, setJobs] = useState<Job[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   const handleFetchJobs = useCallback(async () => {
-    try {
-      const { data } = await axios.get(JOBS_API);
-      setJobs(data);
-    } catch (error) {
-      console.error(error);
-    }
+    const listJobs = new ListJobsUseCase();
+    const jobs = await listJobs.execute();
+    setJobs(jobs);
     setIsLoading(false);
   }, []);
 

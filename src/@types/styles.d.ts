@@ -1,10 +1,5 @@
 import 'styled-components';
 
-type Component = {
-  backgroundColor?: string;
-  color?: string;
-};
-
 declare module 'styled-components' {
   export interface DefaultTheme {
     id: string;
@@ -21,9 +16,22 @@ declare module 'styled-components' {
       black: string;
     };
     components: {
-      body: Component;
-      header: Component;
-      footer: Component;
+      [key: string]: Component;
+    };
+    fontSizes: {
+      xxsmall: string;
+      xsmall: string;
+      small: string;
+      default: string;
+      large: string;
+      heading: {
+        h1: string;
+        h2: string;
+        h3: string;
+        h4: string;
+        h5: string;
+        h6: string;
+      };
     };
   }
 }

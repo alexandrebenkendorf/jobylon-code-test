@@ -1,8 +1,12 @@
-import { jobs } from '../../test/fixtures/jobs';
+import jobsFixture from '../test/fixtures/jobs.json';
+import Job, { JobProps } from '../@core/domain/entities/Job';
 
-import { filterJobs } from './utils';
+import { filterJobs } from './filterJobs';
 
-describe('getFilteredJobs', () => {
+const jobsJSON = JSON.parse(JSON.stringify(jobsFixture));
+const jobs = jobsJSON.map((job: JobProps) => new Job(job));
+
+describe('filterJobs', () => {
   it('should return correct filter', () => {
     let filteredJobs = filterJobs(jobs, ['mana', 'sve']);
     expect(filteredJobs).toHaveLength(1);

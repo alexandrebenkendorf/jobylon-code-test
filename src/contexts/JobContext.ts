@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-import { Job } from "../types";
+import Job from "../@core/domain/entities/Job";
 
 export type JobContextType = {
   jobs: Job[];
