@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { HeadingAs } from '../../../@types/common';
 
 import { HeadingStyled, HeadingStyledProps } from './Heading.styles';

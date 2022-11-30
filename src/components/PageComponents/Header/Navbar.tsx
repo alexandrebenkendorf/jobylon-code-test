@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { Button, Hidden } from '../../common';
+
 import { NavbarItemStyled, NavbarStyled } from './Navbar.styles';
 
 export function Navbar(): React.ReactElement {

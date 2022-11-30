@@ -5,8 +5,9 @@ import GlobalStyle from '../../../globalStyles';
 import theme from '../../../themes/jobylon';
 import { Footer } from '../Footer';
 import { Header } from '../Header';
-import { LayoutStyled } from './Layout.styles';
 import { Main } from '../styles';
+
+import { LayoutStyled } from './Layout.styles';
 
 export function Layout({ children }: { children: React.ReactNode }): React.ReactElement {
   return (
