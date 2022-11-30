@@ -1,12 +1,9 @@
 import styled from 'styled-components';
 
-const fontSizes = {
-  default: '1rem',
-  small: '0.825rem',
-};
+import { FontSize } from '../../../@types/common';
 
-export const Paragraph = styled.p<{ size?: 'default' | 'small' }>`
-  font-size: ${({ size }) => (size ? fontSizes[size] : fontSizes.default)};
+export const Paragraph = styled.p<{ size?: FontSize }>`
+  font-size: ${({ theme, size }) => (size ? theme.fontSizes[size] : theme.fontSizes.default)};
   line-height: 1.5;
   &:last-child {
     margin-bottom: 0;
